@@ -362,6 +362,21 @@ Prefab:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224691174407119274, guid: aa1814ea7c48b214990c1d2a9af49ece,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -27.350037
+      objectReference: {fileID: 0}
+    - target: {fileID: 224715739752797926, guid: aa1814ea7c48b214990c1d2a9af49ece,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 105.01001
+      objectReference: {fileID: 0}
+    - target: {fileID: 224715739752797926, guid: aa1814ea7c48b214990c1d2a9af49ece,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -22.754028
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1814ea7c48b214990c1d2a9af49ece, type: 2}
   m_IsPrefabAsset: 0
@@ -658,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35, y: -27.35}
+  m_AnchoredPosition: {x: -35, y: -27.349976}
   m_SizeDelta: {x: 30.699951, y: 30.699997}
   m_Pivot: {x: 0.49999994, y: 0.5}
 --- !u!114 &771134437
@@ -37859,7 +37874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83.400024, y: -22.753998}
+  m_AnchoredPosition: {x: -83.400024, y: -22.753967}
   m_SizeDelta: {x: 64.99304, y: 28.746}
   m_Pivot: {x: 0.3158963, y: 0.6938642}
 --- !u!114 &2109400227

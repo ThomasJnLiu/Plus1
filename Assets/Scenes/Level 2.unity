@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0326c2cde7f0ea48a2afd14dee584c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Final
+  level: Level 3
 --- !u!212 &119558809
 SpriteRenderer:
   m_ObjectHideFlags: 0
