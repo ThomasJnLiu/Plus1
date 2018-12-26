@@ -98,7 +98,7 @@ public class sc_PlController : MonoBehaviour
             Flip(horMovement);
         }
 
-        if (Input.GetKeyDown(fireButton) && canFire)
+        if (Input.GetKey(fireButton) && canFire)
         {
             HandleFire();
         }
