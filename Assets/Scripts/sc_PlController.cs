@@ -162,7 +162,7 @@ public class sc_PlController : MonoBehaviour
         {
             audio.clip = jump;
             audio.Play();
-            plRigidbody.AddForce(new Vector2(0, jumpForce));
+            plRigidbody.AddForce(new Vector2(plRigidbody.velocity.x, jumpForce));
         }
     }
 
@@ -180,11 +180,11 @@ public class sc_PlController : MonoBehaviour
             {
                 bullet.GetComponent<sc_bulletController>().direction = Vector2.left;
             }
-            else if (verDirection > 0.99)
+            else if (verDirection > 0.01)
             {
                 bullet.GetComponent<sc_bulletController>().direction = Vector2.up;
             }
-            else if (verDirection < -0.99)
+            else if (verDirection < -0.01)
             {
                 bullet.GetComponent<sc_bulletController>().direction = Vector2.down;
             }

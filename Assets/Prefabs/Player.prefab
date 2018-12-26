@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 95490587511354974}
   - component: {fileID: 61723798298689216}
   - component: {fileID: 82540883958171452}
+  - component: {fileID: 70438191117232318}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -91,7 +92,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 23a02d99aea24634eada7d0e34270113, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -120,7 +121,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.81}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.001
 --- !u!61 &61911906545631004
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -146,6 +147,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 0.03}
   m_EdgeRadius: 0
+--- !u!70 &70438191117232318
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925167620221958}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.85, y: 0.85}
+  m_Direction: 0
 --- !u!82 &82540883958171452
 AudioSource:
   m_ObjectHideFlags: 1
