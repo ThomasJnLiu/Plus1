@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  direction: {x: 1, y: 0}
+  direction: {x: -1, y: 0}
   collisionFX: {fileID: 1381903169674926, guid: d2066abd6119a774ebdbbe942ba21ff7,
     type: 2}
   playerBullet: 0

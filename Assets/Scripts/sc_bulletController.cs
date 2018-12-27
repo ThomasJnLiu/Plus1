@@ -44,10 +44,6 @@ public class sc_bulletController : MonoBehaviour
         {
             RemoveBullet();
         }
-        /*if (col.gameObject.tag == "Player")
-        {
-            RemoveBullet();
-        }*/
     }
     public void RemoveBullet()
     {

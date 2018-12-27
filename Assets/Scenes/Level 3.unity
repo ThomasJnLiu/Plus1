@@ -365,7 +365,7 @@ Prefab:
     - target: {fileID: 224691174407119274, guid: aa1814ea7c48b214990c1d2a9af49ece,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -27.350037
+      value: -27.350098
       objectReference: {fileID: 0}
     - target: {fileID: 224715739752797926, guid: aa1814ea7c48b214990c1d2a9af49ece,
         type: 2}
@@ -737,6 +737,8 @@ GameObject:
   - component: {fileID: 826802304}
   - component: {fileID: 826802303}
   - component: {fileID: 826802305}
+  - component: {fileID: 826802307}
+  - component: {fileID: 826802306}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Ground
@@ -36402,13 +36404,169 @@ TilemapCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 826802301}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 23a02d99aea24634eada7d0e34270113, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+--- !u!66 &826802306
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826802301}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 826802305}
+    m_ColliderPaths:
+    - - X: 350000000
+        Y: -190000000
+      - X: 380000000
+        Y: -190000000
+      - X: 380000000
+        Y: -260000000
+      - X: 650000000
+        Y: -260000000
+      - X: 650000000
+        Y: 100000000
+      - X: 660000000
+        Y: 100000000
+      - X: 660000000
+        Y: 210000000
+      - X: -230000000
+        Y: 210000000
+      - X: -230000000
+        Y: -300000000
+      - X: 160000000
+        Y: -300000000
+      - X: 160000000
+        Y: -220000000
+      - X: 260000000
+        Y: -220000000
+      - X: 260000000
+        Y: -190000000
+      - X: 290000000
+        Y: -190000000
+      - X: 290000000
+        Y: -240000000
+      - X: 310000000
+        Y: -240000000
+      - X: 310000000
+        Y: -190000000
+      - X: 330000000
+        Y: -190000000
+      - X: 330000000
+        Y: -310000000
+      - X: 350000000
+        Y: -310000000
+    - - X: -50000000
+        Y: -20000000
+      - X: -50000000
+        Y: 70000000
+      - X: 170000000
+        Y: 70000000
+      - X: 170000000
+        Y: 0
+      - X: 580000000
+        Y: 0
+      - X: 580000000
+        Y: -20000000
+      - X: 130000000
+        Y: -20000000
+      - X: 130000000
+        Y: -10000000
+      - X: 110000000
+        Y: -10000000
+      - X: 110000000
+        Y: 0
+      - X: 90000000
+        Y: 0
+      - X: 90000000
+        Y: -20000000
+      - X: 40000000
+        Y: -20000000
+      - X: 40000000
+        Y: 0
+      - X: 20000000
+        Y: 0
+      - X: 20000000
+        Y: -10000000
+      - X: 0
+        Y: -10000000
+      - X: 0
+        Y: -20000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 35, y: -19}
+      - {x: 38, y: -19}
+      - {x: 38, y: -26}
+      - {x: 65, y: -26}
+      - {x: 65, y: 10}
+      - {x: 66, y: 10}
+      - {x: 66, y: 21}
+      - {x: -23, y: 21}
+      - {x: -23, y: -30}
+      - {x: 16, y: -30}
+      - {x: 16, y: -22}
+      - {x: 26, y: -22}
+      - {x: 26, y: -19}
+      - {x: 29, y: -19}
+      - {x: 29, y: -24}
+      - {x: 31, y: -24}
+      - {x: 31, y: -19}
+      - {x: 33, y: -19}
+      - {x: 33, y: -31}
+      - {x: 35, y: -31}
+    - - {x: -5, y: -2}
+      - {x: -5, y: 7}
+      - {x: 17, y: 7}
+      - {x: 17, y: 0}
+      - {x: 58, y: 0}
+      - {x: 58, y: -2}
+      - {x: 13, y: -2}
+      - {x: 13, y: -1}
+      - {x: 11, y: -1}
+      - {x: 11, y: 0}
+      - {x: 9, y: 0}
+      - {x: 9, y: -2}
+      - {x: 4, y: -2}
+      - {x: 4, y: 0}
+      - {x: 2, y: 0}
+      - {x: 2, y: -1}
+      - {x: 0, y: -1}
+      - {x: 0, y: -2}
+  m_VertexDistance: 0.0005
+--- !u!50 &826802307
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 826802301}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &862793598
 Prefab:
   m_ObjectHideFlags: 0
@@ -36477,7 +36635,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4587475513300908, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.86
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 4587475513300908, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -36727,11 +36885,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4083138941961808, guid: ab0566e33510e9f4aa88739880e95e82, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.95
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4083138941961808, guid: ab0566e33510e9f4aa88739880e95e82, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4083138941961808, guid: ab0566e33510e9f4aa88739880e95e82, type: 2}
       propertyPath: m_LocalPosition.z
@@ -36897,7 +37055,7 @@ Grid:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1350573472}
   m_Enabled: 1
-  m_CellSize: {x: 1.5, y: 1.5, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -37278,7 +37436,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686491188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.22, y: 6.39, z: 0}
+  m_LocalPosition: {x: 15, y: 4.5, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37298,7 +37456,7 @@ MonoBehaviour:
   phase: 1
   player: {fileID: 1122970177}
   player2: {fileID: 2120702131}
-  time: 10
+  time: 6
   hp: 100
   healthText: {fileID: 2085132598}
   bullet: {fileID: 1057000653081232, guid: bf71f6fbdc72fc44fb783b03e551ec5f, type: 2}
@@ -37514,6 +37672,10 @@ Prefab:
     - target: {fileID: 4202755103413404, guid: ce81e932e3335dc499a6e7aa5b1f3c26, type: 2}
       propertyPath: m_LocalScale.y
       value: 1.7512352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677798036672302, guid: ce81e932e3335dc499a6e7aa5b1f3c26, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce81e932e3335dc499a6e7aa5b1f3c26, type: 2}
@@ -37779,7 +37941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.1, y: -49.7}
+  m_AnchoredPosition: {x: 3.1, y: -49.69995}
   m_SizeDelta: {x: 156.2, y: 71.6}
   m_Pivot: {x: 0.5, y: 0.50000024}
 --- !u!114 &2085132597
@@ -37874,7 +38036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83.400024, y: -22.753967}
+  m_AnchoredPosition: {x: -83.400024, y: -22.753906}
   m_SizeDelta: {x: 64.99304, y: 28.746}
   m_Pivot: {x: 0.3158963, y: 0.6938642}
 --- !u!114 &2109400227
