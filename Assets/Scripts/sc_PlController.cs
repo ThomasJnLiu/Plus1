@@ -49,6 +49,8 @@ public class sc_PlController : MonoBehaviour
 
     public string horAxis;
     public string verAxis;
+    public string fireButton2;
+    public string jumpButton2;
     public KeyCode fireButton;
     public KeyCode jumpButton;
     public KeyCode reviveButton;
@@ -98,7 +100,7 @@ public class sc_PlController : MonoBehaviour
             Flip(horMovement);
         }
 
-        if (Input.GetKeyDown(fireButton) && canFire)
+        if (Input.GetButtonDown(fireButton2) && canFire)
         {
             HandleFire();
         }
@@ -158,7 +160,7 @@ public class sc_PlController : MonoBehaviour
 
     private void SenseJump()
     {
-        if (Input.GetKeyDown(jumpButton) && groundDetect.canJump)
+        if (Input.GetButtonDown(jumpButton2) && groundDetect.canJump)
         {
             audio.clip = jump;
             audio.Play();

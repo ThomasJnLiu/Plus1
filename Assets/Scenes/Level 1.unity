@@ -94841,6 +94841,16 @@ Prefab:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114452334708135322, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: fireButton2
+      value: Fire2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114452334708135322, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: jumpButton2
+      value: Jump2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
   m_IsPrefabAsset: 0
@@ -95503,6 +95513,16 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114452334708135322, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: fireButton2
+      value: Fire1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114452334708135322, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: jumpButton2
+      value: Jump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
