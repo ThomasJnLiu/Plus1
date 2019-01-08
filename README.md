@@ -4,9 +4,9 @@
 
 ## Simple 2D platformer cooperative game made in Unity
 
-CONTROLS
+### CONTROLS
 
-### Player 1
+#### Player 1
 
 Movement - Left/Right Arrow Keys
 
@@ -16,7 +16,7 @@ Jump - J
 
 Shoot - K
 
-### Player 2
+#### Player 2
 
 Movement - A/D
 
