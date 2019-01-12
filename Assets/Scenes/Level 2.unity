@@ -64464,7 +64464,7 @@ Prefab:
     - target: {fileID: 114987377674141130, guid: a0397c369629ecf488e6906c7e05829d,
         type: 2}
       propertyPath: time
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1930515885078104, guid: a0397c369629ecf488e6906c7e05829d, type: 2}
       propertyPath: m_Name
