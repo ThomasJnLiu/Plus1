@@ -65,6 +65,9 @@ public class sc_PlController : MonoBehaviour
     public AudioClip shoot;
     public AudioClip jump;
     public AudioClip hurt;
+
+    public RelativeJoint2D plJoint;
+
     void Start()
     {
         plRigidbody = GetComponent<Rigidbody2D>();
@@ -72,15 +75,18 @@ public class sc_PlController : MonoBehaviour
         plRenderer = GetComponent<SpriteRenderer>();
         plCollider = GetComponent<Collider2D>();
         audio = GetComponent<AudioSource>();
-
-
     }
 
     private void Update()
     {
         healthText.text = health.ToString();
         if (canMove && !isDead && !inDialogue)
+        {
+            OnPlayer();
             SenseJump();
+
+        }
+
         if (inDialogue == true)
         {
             PlayerStop();
@@ -137,6 +143,20 @@ public class sc_PlController : MonoBehaviour
         plRigidbody.gravityScale = 1f;
 
     }
+    private void OnPlayer()
+    {
+        if (groundDetect.onPlayer)
+        {
+            plJoint.enabled = true;
+            plRigidbody.mass = 0.0001f;
+        }
+        if (!groundDetect.onPlayer)
+        {
+            plJoint.enabled = false;
+            plRigidbody.mass = 1f;
+        }
+
+    }
     private void Flip(float horMovement)
     {
         if (horMovement > 0 && !facingRight || horMovement < 0 && facingRight)
@@ -160,12 +180,18 @@ public class sc_PlController : MonoBehaviour
 
     private void SenseJump()
     {
+        if (Input.GetButtonDown(jumpButton2))
+        {
+            plJoint.enabled = false;
+        }
         if (Input.GetButtonDown(jumpButton2) && groundDetect.canJump)
         {
             audio.clip = jump;
             audio.Play();
+            plRigidbody.mass = 1;
             plRigidbody.AddForce(new Vector2(plRigidbody.velocity.x, jumpForce));
         }
+
     }
 
     private void HandleFire()

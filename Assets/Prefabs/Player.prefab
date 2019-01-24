@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 95490587511354974}
   - component: {fileID: 61723798298689216}
   - component: {fileID: 82540883958171452}
-  - component: {fileID: 70438191117232318}
+  - component: {fileID: 254697227328616008}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -147,21 +147,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21, y: 0.03}
   m_EdgeRadius: 0
---- !u!70 &70438191117232318
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1925167620221958}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.85, y: 0.85}
-  m_Direction: 0
 --- !u!82 &82540883958171452
 AudioSource:
   m_ObjectHideFlags: 1
@@ -289,6 +274,7 @@ MonoBehaviour:
   canJump: 0
   plAnimator: {fileID: 95490587511354974}
   player: {fileID: 114452334708135322}
+  onPlayer: 0
 --- !u!114 &114452334708135322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,6 +301,8 @@ MonoBehaviour:
   inDialogue: 0
   horAxis: Horizontal
   verAxis: Vertical
+  fireButton2: 
+  jumpButton2: 
   fireButton: 107
   jumpButton: 106
   reviveButton: 0
@@ -323,6 +311,7 @@ MonoBehaviour:
   shoot: {fileID: 8300000, guid: a80800b71a402654db256da99d87b783, type: 3}
   jump: {fileID: 8300000, guid: abaed3ba309ec3c41b4d8cf2356b35d4, type: 3}
   hurt: {fileID: 8300000, guid: e3cf5e8315586274393c2ef68304e403, type: 3}
+  plJoint: {fileID: 254697227328616008}
 --- !u!212 &212079698192865496
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -369,3 +358,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!254 &254697227328616008
+RelativeJoint2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925167620221958}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_MaxForce: 1
+  m_MaxTorque: 10000
+  m_CorrectionScale: 0.3
+  m_AutoConfigureOffset: 1
+  m_LinearOffset: {x: 0, y: 0}
+  m_AngularOffset: 0

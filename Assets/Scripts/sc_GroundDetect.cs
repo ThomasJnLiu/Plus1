@@ -7,6 +7,7 @@ public class sc_GroundDetect : MonoBehaviour
     public bool canJump;
     public Animator plAnimator;
     public sc_PlController player;
+    public bool onPlayer;
 
     // Use this for initialization
     void Start()
@@ -28,6 +29,10 @@ public class sc_GroundDetect : MonoBehaviour
             canJump = true;
             plAnimator.SetBool("isJumping", false);
         }
+        if (col.gameObject.tag == "Player")
+        {
+            onPlayer = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -35,6 +40,7 @@ public class sc_GroundDetect : MonoBehaviour
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "Player")
         {
             canJump = false;
+            onPlayer = false;
             plAnimator.SetBool("isJumping", true);
         }
 

@@ -37434,6 +37434,11 @@ Prefab:
       propertyPath: jumpButton2
       value: Jump2
       objectReference: {fileID: 0}
+    - target: {fileID: 254697227328616008, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1122970180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
   m_IsPrefabAsset: 0
@@ -37634,6 +37639,11 @@ MonoBehaviour:
 --- !u!4 &1122970179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4587475513300908, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468972246}
+--- !u!50 &1122970180 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50397655136552238, guid: 3dc3bfe5194fd174ba91342fd8940de0,
     type: 2}
   m_PrefabInternal: {fileID: 1468972246}
 --- !u!1001 &1191443404
@@ -38400,6 +38410,11 @@ Prefab:
       propertyPath: jumpButton2
       value: Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 254697227328616008, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 2120702134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
   m_IsPrefabAsset: 0
@@ -39103,6 +39118,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 960675017}
   m_Script: {fileID: 11500000, guid: c4178983c1956c94da4c0276897ad669, type: 3}
+--- !u!50 &2120702134 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 50397655136552238, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+    type: 2}
+  m_PrefabInternal: {fileID: 960675017}
 --- !u!4 &2120702137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4587475513300908, guid: 3dc3bfe5194fd174ba91342fd8940de0,
