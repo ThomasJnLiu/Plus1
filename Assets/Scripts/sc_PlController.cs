@@ -67,6 +67,7 @@ public class sc_PlController : MonoBehaviour
     public AudioClip hurt;
 
     public RelativeJoint2D plJoint;
+    private Transform plTransform;
 
     void Start()
     {
@@ -75,6 +76,7 @@ public class sc_PlController : MonoBehaviour
         plRenderer = GetComponent<SpriteRenderer>();
         plCollider = GetComponent<Collider2D>();
         audio = GetComponent<AudioSource>();
+        plTransform = GetComponent<Transform>();
     }
 
     private void Update()
@@ -131,6 +133,10 @@ public class sc_PlController : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
+        if (plTransform.position.y > 100)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
     public void playerRevive()
     {
@@ -150,11 +156,16 @@ public class sc_PlController : MonoBehaviour
             plJoint.enabled = true;
             plRigidbody.mass = 0.0001f;
         }
-        if (!groundDetect.onPlayer)
+        else
         {
-            plJoint.enabled = false;
             plRigidbody.mass = 1f;
+            plJoint.enabled = false;
         }
+        /*if (!groundDetect.onPlayer)
+        {
+            plRigidbody.mass = 1f;
+            plJoint.enabled = false;
+        }*/
 
     }
     private void Flip(float horMovement)
