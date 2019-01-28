@@ -81,10 +81,11 @@ public class sc_PlController : MonoBehaviour
 
     private void Update()
     {
+        OnPlayer();
         healthText.text = health.ToString();
         if (canMove && !isDead && !inDialogue)
         {
-            OnPlayer();
+
             SenseJump();
 
         }
@@ -154,19 +155,13 @@ public class sc_PlController : MonoBehaviour
         if (groundDetect.onPlayer)
         {
             plJoint.enabled = true;
-            plRigidbody.mass = 0.0001f;
+            plRigidbody.mass = 0.001f;
         }
         else
         {
             plRigidbody.mass = 1f;
             plJoint.enabled = false;
         }
-        /*if (!groundDetect.onPlayer)
-        {
-            plRigidbody.mass = 1f;
-            plJoint.enabled = false;
-        }*/
-
     }
     private void Flip(float horMovement)
     {
