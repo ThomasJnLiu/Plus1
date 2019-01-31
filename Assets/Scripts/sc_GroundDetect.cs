@@ -31,7 +31,10 @@ public class sc_GroundDetect : MonoBehaviour
         }
         if (col.gameObject.tag == "Player")
         {
-            onPlayer = true;
+            if (col.gameObject.GetComponent<sc_PlController>().health > 0)
+            {
+                onPlayer = true;
+            }
         }
     }
 

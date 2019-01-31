@@ -147,7 +147,7 @@ public class sc_PlController : MonoBehaviour
         isDead = false;
         canFire = true;
         plCollider.isTrigger = false;
-        plRigidbody.gravityScale = 1f;
+        plRigidbody.gravityScale = 2f;
 
     }
     private void OnPlayer()
