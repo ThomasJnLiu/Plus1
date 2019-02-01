@@ -65407,11 +65407,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4738886203171366, guid: 33c975a84eed2e04aa0e65845f14d6b4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 43.47
+      value: 38.73
       objectReference: {fileID: 0}
     - target: {fileID: 4738886203171366, guid: 33c975a84eed2e04aa0e65845f14d6b4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.45
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 4738886203171366, guid: 33c975a84eed2e04aa0e65845f14d6b4, type: 2}
       propertyPath: m_LocalPosition.z
