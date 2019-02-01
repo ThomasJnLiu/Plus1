@@ -6,6 +6,7 @@ public class sc_button : MonoBehaviour
 {
 
     public GameObject wall;
+
     // Use this for initialization
     void Start()
     {
@@ -22,7 +23,15 @@ public class sc_button : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Bullet2")
         {
-            Destroy(wall);
+            wall.SetActive(false);
+            StartCoroutine("WallTimer");
+
         }
+    }
+
+    public IEnumerator WallTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        wall.SetActive(true);
     }
 }
