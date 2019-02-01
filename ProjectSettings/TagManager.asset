@@ -10,6 +10,8 @@ TagManager:
   - Bullet2
   - Marker
   - Marker2
+  - Flag
+  - Kill
   layers:
   - Default
   - TransparentFX

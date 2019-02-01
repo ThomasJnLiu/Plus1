@@ -69,6 +69,8 @@ public class sc_PlController : MonoBehaviour
     public RelativeJoint2D plJoint;
     private Transform plTransform;
 
+    private Transform flagTransform;
+
     void Start()
     {
         plRigidbody = GetComponent<Rigidbody2D>();
@@ -113,26 +115,32 @@ public class sc_PlController : MonoBehaviour
             HandleFire();
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && isDead)
+        /*if (Input.GetKeyDown(KeyCode.R) && isDead)
         {
 
             health = 50;
             plAnimator.Play("Default");
             canMove = true;
             isDead = false;
-        }
+        }*/
 
         if (isDead)
         {
-            PlayerStop();
+            plTransform.position = new Vector3(flagTransform.position.x, flagTransform.position.y + 1, 1);
+            isDead = false;
+            health = 50;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Application.LoadLevel(Application.loadedLevel);
         }
     }
     public void checkDead()
     {
-        if (isDead && player2.GetComponent<sc_PlController>().isDead)
+        /*if (isDead && player2.GetComponent<sc_PlController>().isDead)
         {
             Application.LoadLevel(Application.loadedLevel);
-        }
+        }*/
         if (plTransform.position.y > 100)
         {
             Application.LoadLevel(Application.loadedLevel);
@@ -236,14 +244,15 @@ public class sc_PlController : MonoBehaviour
             }
             if (health <= 0)
             {
-                health = 0;
+                isDead = true;
+                /*health = 0;
                 PlayerStop();
                 canMove = false;
-                isDead = true;
+                
                 canFire = false;
                 plCollider.isTrigger = true;
                 plRigidbody.gravityScale = 0f;
-                plAnimator.Play("playerScrap");
+                plAnimator.Play("playerScrap");*/
 
                 Scene currentScene = SceneManager.GetActiveScene();
 
@@ -336,6 +345,14 @@ public class sc_PlController : MonoBehaviour
             {
                 TakenDamage(true, 5);
             }
+        }
+        if (collision.gameObject.tag == "Flag")
+        {
+            flagTransform = collision.gameObject.GetComponent<Transform>();
+        }
+        if (collision.gameObject.tag == "Kill")
+        {
+            isDead = true;
         }
     }
 
