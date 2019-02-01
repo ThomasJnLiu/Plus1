@@ -38415,6 +38415,11 @@ Prefab:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 2120702134}
+    - target: {fileID: 50397655136552238, guid: 3dc3bfe5194fd174ba91342fd8940de0,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc3bfe5194fd174ba91342fd8940de0, type: 2}
   m_IsPrefabAsset: 0

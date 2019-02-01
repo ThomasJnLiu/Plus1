@@ -291,6 +291,7 @@ MonoBehaviour:
   canMove: 1
   isDead: 0
   groundPoint: {fileID: 1301329889583374}
+  jumpForce: 400
   canJump2: 0
   groundDetect: {fileID: 114270869350961838}
   bullet: {fileID: 1866800330069014, guid: 50de73f09910779438b6e5176f22ce35, type: 2}
@@ -309,7 +310,7 @@ MonoBehaviour:
   player2: {fileID: 0}
   screen: {fileID: 0}
   shoot: {fileID: 8300000, guid: a80800b71a402654db256da99d87b783, type: 3}
-  jump: {fileID: 8300000, guid: abaed3ba309ec3c41b4d8cf2356b35d4, type: 3}
+  jump: {fileID: 8300000, guid: 9eb0e3b252a566344a79878ac375c1db, type: 3}
   hurt: {fileID: 8300000, guid: e3cf5e8315586274393c2ef68304e403, type: 3}
   plJoint: {fileID: 254697227328616008}
 --- !u!212 &212079698192865496
@@ -370,7 +371,7 @@ RelativeJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_MaxForce: 1
+  m_MaxForce: 5000
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1

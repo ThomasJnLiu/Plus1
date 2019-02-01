@@ -26,7 +26,7 @@ public class sc_PlController : MonoBehaviour
     //variables related to jumping
     public GameObject groundPoint;
 
-    private float jumpForce = 400f;
+    public float jumpForce = 400f;
     public bool canJump2;
     public sc_GroundDetect groundDetect;
 
@@ -81,7 +81,6 @@ public class sc_PlController : MonoBehaviour
 
     private void Update()
     {
-        OnPlayer();
         healthText.text = health.ToString();
         if (canMove && !isDead && !inDialogue)
         {
@@ -150,19 +149,7 @@ public class sc_PlController : MonoBehaviour
         plRigidbody.gravityScale = 2f;
 
     }
-    private void OnPlayer()
-    {
-        if (groundDetect.onPlayer)
-        {
-            plJoint.enabled = true;
-            plRigidbody.mass = 0.001f;
-        }
-        else
-        {
-            plRigidbody.mass = 1f;
-            plJoint.enabled = false;
-        }
-    }
+
     private void Flip(float horMovement)
     {
         if (horMovement > 0 && !facingRight || horMovement < 0 && facingRight)
