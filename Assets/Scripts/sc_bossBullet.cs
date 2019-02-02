@@ -7,13 +7,13 @@ public class sc_bossBullet : MonoBehaviour
     public float moveSpeed = 7f;
     private Rigidbody2D myRbd;
     public GameObject player1;
-    Vector2 moveDir;
+    public Vector2 moveDir;
     // Use this for initialization
     void Start()
     {
         player1 = GameObject.FindWithTag("Player");
         myRbd = GetComponent<Rigidbody2D>();
-        moveDir = (player1.transform.position - transform.position).normalized * moveSpeed;
+        //moveDir = (player1.transform.position - transform.position).normalized * moveSpeed;
         myRbd.velocity = new Vector2(moveDir.x, moveDir.y);
     }
 

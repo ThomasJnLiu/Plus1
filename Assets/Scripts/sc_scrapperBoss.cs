@@ -23,7 +23,8 @@ public class sc_scrapperBoss : MonoBehaviour
     public GameObject bullet;
     bool inPosition = false;
     bool isDead = false;
-
+    private bool playerTarget = true;
+    private int count = 0;
     public Image black;
     // Use this for initialization
     void Start()
@@ -41,13 +42,30 @@ public class sc_scrapperBoss : MonoBehaviour
     }
     IEnumerator Reload()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.9f);
+            if (playerTarget)
+            {
+                bullet.GetComponent<sc_bossBullet>().moveDir = (player.transform.position - transform.position).normalized * 7f;
+            }
+            else
+            {
+                bullet.GetComponent<sc_bossBullet>().moveDir = (player2.transform.position - transform.position).normalized * 7f;
+            }
             Instantiate(bullet, transform.position, transform.rotation);
+
+            //moveDir = (player1.transform.position - transform.position).normalized * moveSpeed;
         }
         yield return new WaitForSeconds(1f);
         StartCoroutine("Reload");
+        count++;
+
+        if (count == 3)
+        {
+            playerTarget = !playerTarget;
+            count = 0;
+        }
     }
     // Update is called once per frame
     void Update()

@@ -126,9 +126,19 @@ public class sc_PlController : MonoBehaviour
 
         if (isDead)
         {
-            plTransform.position = new Vector3(flagTransform.position.x, flagTransform.position.y + 1, 1);
-            isDead = false;
-            health = 50;
+            Scene currentScene = SceneManager.GetActiveScene();
+            string sceneName = currentScene.name;
+            if (sceneName == "Level 3")
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }
+            else
+            {
+                plTransform.position = new Vector3(flagTransform.position.x, flagTransform.position.y + 1, 1);
+                isDead = false;
+                health = 50;
+            }
+
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -262,6 +272,10 @@ public class sc_PlController : MonoBehaviour
                 {
                     Debug.Log("final");
                     screen.Fade();
+                }
+                if (sceneName == "Level 3")
+                {
+                    Application.LoadLevel(Application.loadedLevel);
                 }
 
             }
